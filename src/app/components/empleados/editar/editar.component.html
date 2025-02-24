@@ -1,0 +1,44 @@
+<div class="container mt-4">
+    <h2>Editar Empleado</h2>
+    <form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" formControlName="nombre" class="form-control" required>
+            <div *ngIf="empleadoForm.get('nombre')?.invalid && empleadoForm.get('nombre')?.touched" class="text-danger">
+                El nombre es requerido.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="apellidos" class="form-label">Apellidos</label>
+            <input type="text" id="apellidos" formControlName="apellidos" class="form-control" required>
+            <div *ngIf="empleadoForm.get('apellidos')?.invalid && empleadoForm.get('apellidos')?.touched"
+                class="text-danger">
+                Los apellidos son requeridos.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" id="edad" formControlName="edad" class="form-control" required>
+            <div *ngIf="empleadoForm.get('edad')?.invalid && empleadoForm.get('edad')?.touched" class="text-danger">
+                La edad es requerida.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+            <input type="date" id="fecha_nacimiento" formControlName="fecha_nacimiento" class="form-control" required>
+            <div *ngIf="empleadoForm.get('fecha_nacimiento')?.invalid && empleadoForm.get('fecha_nacimiento')?.touched"
+                class="text-danger">
+                La fecha de nacimiento es requerida y no puede ser anterior a 1950.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="id_hotel" class="form-label">ID Hotel</label>
+            <input type="number" id="id_hotel" formControlName="id_hotel" class="form-control" required>
+            <div *ngIf="empleadoForm.get('id_hotel')?.invalid && empleadoForm.get('id_hotel')?.touched"
+                class="text-danger">
+                El ID del hotel es requerido.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+</div>
