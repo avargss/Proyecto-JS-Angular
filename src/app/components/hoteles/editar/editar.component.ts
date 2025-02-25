@@ -35,7 +35,7 @@ export class EditarHotelComponent implements OnInit {
     }
   }
 
-  loadHotel(id: string): void {
+  loadHotel(id: string): void {    
     this.hotelesService.getHotelById(id).subscribe(
       (hotel) => {
         this.hotel = hotel;

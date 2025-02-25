@@ -26,7 +26,7 @@ export const routes: Routes = [
         title: 'Crear hoteles'
     },
     {
-        path: 'hoteles/editar/:?',
+        path: 'hoteles/editar/:id',
         component: EditarHotelComponent,
         title: 'Editar hoteles'
     },

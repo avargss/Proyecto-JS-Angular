@@ -4,5 +4,5 @@ export interface Empleados {
     apellidos: string;
     edad: number;
     fecha_nacimiento: string;
-    id_hotel: number;
+    id_hotel: string;
 }

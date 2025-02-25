@@ -26,6 +26,11 @@ export class EmpleadosService {
         return this.http.get<Empleados>(`${this.empleadosUrl}/${id}`);
     }
 
+    // Esto es para la relación entre hotel - empleado
+    getEmpleadoByHotelId(id_hotel: string) {
+        return this.http.get<Empleados[]>(`${this.empleadosUrl}?id_hotel=${id_hotel}`);
+    }
+
     addEmpleado(empleado: Empleados) {
         return this.http.post<Empleados>(this.empleadosUrl, empleado);
     }

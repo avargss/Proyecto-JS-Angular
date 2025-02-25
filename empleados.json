@@ -6,7 +6,7 @@
       "apellidos": "González López",
       "edad": 30,
       "fecha_nacimiento": "1994-03-15",
-      "id_hotel": 1
+      "id_hotel": "1"
     },
     {
       "id": "284",
@@ -14,7 +14,7 @@
       "apellidos": "Fernández Ruiz",
       "edad": 45,
       "fecha_nacimiento": "1979-08-22",
-      "id_hotel": 2
+      "id_hotel": "2"
     },
     {
       "id": "945",
@@ -22,7 +22,7 @@
       "apellidos": "Martínez Pérez",
       "edad": 28,
       "fecha_nacimiento": "1996-11-10",
-      "id_hotel": 3
+      "id_hotel": "3"
     },
     {
       "id": "370",
@@ -30,7 +30,7 @@
       "apellidos": "García Sánchez",
       "edad": 35,
       "fecha_nacimiento": "1989-02-05",
-      "id_hotel": 4
+      "id_hotel": "4"
     },
     {
       "id": "811",
@@ -38,7 +38,7 @@
       "apellidos": "Hernández Díaz",
       "edad": 26,
       "fecha_nacimiento": "1996-06-12",
-      "id_hotel": 5
+      "id_hotel": "5"
     }
   ]
 }
