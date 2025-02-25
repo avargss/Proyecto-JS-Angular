@@ -1,5 +1,5 @@
 export interface Hoteles {
-    id: number;
+    id: string;
     nombre: string;
     direccion: string;
     provincia: string;

@@ -1,8 +1,13 @@
 import { Routes } from '@angular/router';
-import { HotelesComponent } from './components/hoteles/hoteles.component';
-import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { HomeComponent } from './components/home/home.component';
-import { EditarComponent } from './components/empleados/editar/editar.component';
+
+import { HotelesComponent } from './components/hoteles/hoteles.component';
+import { CrearHotelComponent } from './components/hoteles/crear/crear.component';
+import { EditarHotelComponent } from './components/hoteles/editar/editar.component';
+
+import { EmpleadosComponent } from './components/empleados/empleados.component';
+import { EditarEmpleadoComponent } from './components/empleados/editar/editar.component';
+import { CrearEmpleadoComponent } from './components/empleados/crear/crear.component';
 
 export const routes: Routes = [
     {
@@ -17,12 +22,12 @@ export const routes: Routes = [
     },
     {
         path: 'hoteles/:?',
-        component: HotelesComponent,
+        component: CrearHotelComponent,
         title: 'Crear hoteles'
     },
     {
         path: 'hoteles/editar/:?',
-        component: HotelesComponent,
+        component: EditarHotelComponent,
         title: 'Editar hoteles'
     },
     {
@@ -32,12 +37,12 @@ export const routes: Routes = [
     },
     {
         path: 'empleados/:?',
-        component: EmpleadosComponent,
+        component: CrearEmpleadoComponent,
         title: 'Crear empleados'
     },
     {
         path: 'empleados/editar/:id',
-        component: EditarComponent,
+        component: EditarEmpleadoComponent,
         title: 'Editar empleados'
     }
 ];

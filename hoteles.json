@@ -1,0 +1,54 @@
+{
+  "hoteles": [
+    {
+      "id": "1",
+      "nombre": "Hotel Ritz Madrid",
+      "direccion": "Plaza de la Lealtad, 5",
+      "provincia": "Madrid",
+      "aforo": 200,
+      "piscina": true,
+      "latitud": 40.416775,
+      "longitud": -3.692481
+    },
+    {
+      "id": "2",
+      "nombre": "Hotel Arts Barcelona",
+      "direccion": "Carrer de la Marina, 19-21",
+      "provincia": "Barcelona",
+      "aforo": 300,
+      "piscina": true,
+      "latitud": 41.385064,
+      "longitud": 2.195406
+    },
+    {
+      "id": "3",
+      "nombre": "Gran Hotel Miramar",
+      "direccion": "Paseo Reding, 22-24",
+      "provincia": "Málaga",
+      "aforo": 250,
+      "piscina": true,
+      "latitud": 36.719444,
+      "longitud": -4.412778
+    },
+    {
+      "id": "4",
+      "nombre": "Hotel Alfonso XIII",
+      "direccion": "Calle San Fernando, 2",
+      "provincia": "Sevilla",
+      "aforo": 280,
+      "piscina": true,
+      "latitud": 37.383333,
+      "longitud": -5.995
+    },
+    {
+      "id": "5",
+      "nombre": "Hotel María Cristina",
+      "direccion": "Paseo República Argentina, 4",
+      "provincia": "San Sebastián",
+      "aforo": 180,
+      "piscina": false,
+      "latitud": 43.32164,
+      "longitud": -1.98434
+    }
+  ]
+}

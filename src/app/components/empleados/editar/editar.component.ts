@@ -6,13 +6,13 @@ import { EmpleadosService } from '../../../services/empleados.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-editar',
+  selector: 'app-editarE',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './editar.component.html',
   styleUrl: './editar.component.css'
 })
-export class EditarComponent implements OnInit {
+export class EditarEmpleadoComponent implements OnInit {
   empleadoForm: FormGroup;
   empleado: Empleados | null = null;
 
@@ -29,11 +29,11 @@ export class EditarComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.loadEmpleado(Number(id));
+      this.loadEmpleado(id);
     }
   }
 
-  loadEmpleado(id: number): void {
+  loadEmpleado(id: string): void {
     this.empleadosService.getEmpleadoById(id).subscribe(
       (empleado) => {
         this.empleado = empleado;

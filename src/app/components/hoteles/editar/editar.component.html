@@ -1,1 +1,58 @@
-<p>editar works!</p>
+<div class="container mt-4">
+    <h2>Editar Hotel</h2>
+    <form [formGroup]="hotelesForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" formControlName="nombre" class="form-control" required>
+            <div *ngIf="hotelesForm.get('nombre')?.invalid && hotelesForm.get('nombre')?.touched" class="text-danger">
+                El nombre es requerido.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" id="direccion" formControlName="direccion" class="form-control" required>
+            <div *ngIf="hotelesForm.get('direccion')?.invalid && hotelesForm.get('direccion')?.touched"
+                class="text-danger">
+                La dirección es requerida.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="provincia" class="form-label">Provincia</label>
+            <input type="text" id="provincia" formControlName="provincia" class="form-control" required>
+            <div *ngIf="hotelesForm.get('provincia')?.invalid && hotelesForm.get('provincia')?.touched"
+                class="text-danger">
+                La provincia es requerida.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="aforo" class="form-label">Aforo</label>
+            <input type="number" id="aforo" formControlName="aforo" class="form-control" required>
+            <div *ngIf="hotelesForm.get('aforo')?.invalid && hotelesForm.get('aforo')?.touched" class="text-danger">
+                El aforo es requerido y debe ser mayor que 0.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="piscina" class="form-label">Piscina</label>
+            <input type="checkbox" id="piscina" formControlName="piscina" class="form-check-input">
+            <div *ngIf="hotelesForm.get('piscina')?.invalid && hotelesForm.get('piscina')?.touched" class="text-danger">
+                La piscina es requerida.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="latitud" class="form-label">Latitud</label>
+            <input type="number" id="latitud" formControlName="latitud" class="form-control" required>
+            <div *ngIf="hotelesForm.get('latitud')?.invalid && hotelesForm.get('latitud')?.touched" class="text-danger">
+                La latitud es requerida.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="longitud" class="form-label">Longitud</label>
+            <input type="number" id="longitud" formControlName="longitud" class="form-control" required>
+            <div *ngIf="hotelesForm.get('longitud')?.invalid && hotelesForm.get('longitud')?.touched"
+                class="text-danger">
+                La longitud es requerida.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+</div>

@@ -10,7 +10,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class EmpleadosService {
     private empleados: Empleados[] = [];
 
-    empleadosUrl = 'http://localhost:3000/empleados';
+    empleadosUrl = 'http://localhost:3001/empleados';
 
     private empleadosSubject = new BehaviorSubject<Empleados[]>([]);
     empleados$: Observable<Empleados[]> = this.empleadosSubject.asObservable();
@@ -22,7 +22,7 @@ export class EmpleadosService {
         return this.http.get<Empleados[]>(this.empleadosUrl);
     }
 
-    getEmpleadoById(id: number) {
+    getEmpleadoById(id: string) {
         return this.http.get<Empleados>(`${this.empleadosUrl}/${id}`);
     }
 
@@ -34,8 +34,7 @@ export class EmpleadosService {
         return this.http.put<Empleados>(`${this.empleadosUrl}/${empleado.id}`, empleado);
     }
 
-    deleteEmpleado(id: number) {
+    deleteEmpleado(id: string) {
         return this.http.delete<Empleados>(`${this.empleadosUrl}/${id}`);
     }
-    
 }

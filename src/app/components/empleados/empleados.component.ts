@@ -28,9 +28,8 @@ export class EmpleadosComponent {
       }
     );
   }
-
   
-  deleteEmpleado(id: number) {
+  deleteEmpleado(id: string) {
     this.empleadosService.deleteEmpleado(id).subscribe(
       
       (response) => {
