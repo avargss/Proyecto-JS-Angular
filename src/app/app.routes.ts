@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { MapaLeafletComponent } from './components/mapa-leaflet/mapa-leaflet.component';
 
 import { HotelesComponent } from './components/hoteles/hoteles.component';
 import { CrearHotelComponent } from './components/hoteles/crear/crear.component';
 import { EditarHotelComponent } from './components/hoteles/editar/editar.component';
+import { DetalleHotelComponent } from './components/hoteles/detalle/detalle.component';
 
 import { EmpleadosComponent } from './components/empleados/empleados.component';
 import { EditarEmpleadoComponent } from './components/empleados/editar/editar.component';
@@ -16,12 +18,17 @@ export const routes: Routes = [
         title: 'Home'
     },
     {
+        path: 'mapa',
+        component: MapaLeafletComponent,
+        title: 'Mapa'
+    },
+    {
         path: 'hoteles',
         component: HotelesComponent,
         title: 'Hoteles'
     },
     {
-        path: 'hoteles/:?',
+        path: 'hoteles/crear',
         component: CrearHotelComponent,
         title: 'Crear hoteles'
     },
@@ -31,12 +38,17 @@ export const routes: Routes = [
         title: 'Editar hoteles'
     },
     {
+        path: 'hoteles/detalle/:id',
+        component: DetalleHotelComponent,
+        title: 'Detalle del hotel'
+    },
+    {
         path: 'empleados',
         component: EmpleadosComponent,
         title: 'Empleados'
     },
     {
-        path: 'empleados/:?',
+        path: 'empleados/crear',
         component: CrearEmpleadoComponent,
         title: 'Crear empleados'
     },

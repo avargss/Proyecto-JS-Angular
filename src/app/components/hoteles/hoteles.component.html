@@ -26,11 +26,18 @@
                 <td>{{hotel.latitud}}</td>
                 <td>{{hotel.longitud}}</td>
                 <td>
+                    <a [routerLink]="['/hoteles/detalle', hotel.id]">
+                        <button class="btn btn-info" style="margin-right: 10px;">
+                            <i class="bi bi-eye"></i> Detalles
+                        </button>
+                    </a>
+
                     <a [routerLink]="['/hoteles/editar/', hotel.id]">
                         <button class="btn btn-success" style="margin-right: 10px;">
                             <i class="bi bi-pencil"></i> Editar
                         </button>
                     </a>
+                    
                     <button class="btn btn-danger" (click)="deleteHotel(hotel.id);">
                         <i class="bi bi-trash3"></i> Borrar
                     </button>

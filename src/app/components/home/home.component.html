@@ -1,4 +1,4 @@
-<div class="container d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 100px);">
+<div class="container d-flex flex-column align-items-center justify-content-center w-75" style="min-height: calc(100vh - 100px);">
     <div class="row text-center w-100 align-items-center">
         <div class="col-sm-6 mb-4">
             <div class="card mx-auto">
@@ -25,5 +25,13 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <a [routerLink]="['/mapa']">
+            <button class="btn btn-primary">
+                <i class="bi bi-geo"></i> Consultar mapa
+            </button>
+        </a>
     </div>
 </div>
