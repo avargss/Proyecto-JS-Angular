@@ -43,11 +43,16 @@ export class DetalleHotelComponent implements OnInit, AfterViewInit, OnDestroy {
         return;
       }
 
-      this.mapa = L.map(mapElement).setView([0, 0], 13);
+      this.mapa = L.map(mapElement).setView([Number(this.hotel?.latitud), Number(this.hotel?.longitud)], 50);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(this.mapa);
+
+      L.marker([Number(this.hotel?.latitud), Number(this.hotel?.longitud)]).addTo(this.mapa)
+        .bindPopup(this.hotel?.nombre || '')
+        .openPopup();
+
     }, 500);
   }
 

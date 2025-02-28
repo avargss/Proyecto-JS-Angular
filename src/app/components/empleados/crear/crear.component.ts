@@ -4,6 +4,8 @@ import { Empleados } from '../../../model/empleados';
 import { EmpleadosService } from '../../../services/empleados.service';
 import { Router } from '@angular/router';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Hoteles } from '../../../model/hoteles';
+import { HotelesService } from '../../../services/hoteles.service';
 
 @Component({
   selector: 'app-crear',
@@ -15,9 +17,10 @@ import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validator
 export class CrearEmpleadoComponent implements OnInit {
 
   empleados: Empleados[] = [];
+  hoteles: Hoteles[] = [];
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private empleadosService: EmpleadosService, private router: Router) {
+  constructor(private fb: FormBuilder, private empleadosService: EmpleadosService, private hotelesService: HotelesService, private router: Router) {
     this.form = this.fb.group({
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
@@ -34,6 +37,15 @@ export class CrearEmpleadoComponent implements OnInit {
       },
       (error) => {
         console.log('Error al obtener empleados', error);
+      }
+    );
+
+    this.hotelesService.getAllHoteles().subscribe(
+      (hoteles) => {
+        this.hoteles = hoteles;
+      },
+      (error) => {
+        console.log('Error al obtener hoteles', error);
       }
     );
   }

@@ -1,14 +1,6 @@
 {
   "empleados": [
     {
-      "id": "512",
-      "nombre": "María",
-      "apellidos": "González López",
-      "edad": 30,
-      "fecha_nacimiento": "1994-03-15",
-      "id_hotel": "1"
-    },
-    {
       "id": "284",
       "nombre": "Carlos",
       "apellidos": "Fernández Ruiz",

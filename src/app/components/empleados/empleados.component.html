@@ -8,7 +8,7 @@
                 <th>APELLIDOS</th>
                 <th>EDAD</th>
                 <th>FECHA NACIMIENTO</th>
-                <th>ID HOTEL</th>
+                <th>HOTEL</th>
                 <th>ACCIONES</th>
             </tr>
         </thead>
@@ -20,7 +20,7 @@
                 <td>{{empleado.apellidos}}</td>
                 <td>{{empleado.edad}}</td>
                 <td>{{empleado.fecha_nacimiento}}</td>
-                <td>{{empleado.id_hotel}}</td>
+                <td>{{hotelesMap[empleado.id_hotel]}}</td>
                 <td>
                     <a [routerLink]="['/empleados/editar/', empleado.id]">
                         <button class="btn btn-success" style="margin-right: 10px;">

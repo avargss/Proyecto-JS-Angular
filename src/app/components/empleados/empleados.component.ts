@@ -3,6 +3,8 @@ import { Component, inject, Input } from '@angular/core';
 import { Empleados } from '../../model/empleados';
 import { EmpleadosService } from '../../services/empleados.service';
 import { RouterLink } from '@angular/router';
+import { Hoteles } from '../../model/hoteles';
+import { HotelesService } from '../../services/hoteles.service';
 
 @Component({
   selector: 'app-empleados',
@@ -16,8 +18,10 @@ export class EmpleadosComponent {
   @Input() empleadosList: Empleados[] = [];
 
   empleadosService: EmpleadosService = inject(EmpleadosService);
+  hoteles: Hoteles[] = [];
+  hotelesMap: { [key: string]: string } = {};
 
-  constructor() {
+  constructor(private hotelesService: HotelesService) {
 
     this.empleadosService.getAllEmpleados().subscribe(
       (empleadosList) => {
@@ -25,6 +29,19 @@ export class EmpleadosComponent {
       },
       (error) => {
         console.error('Error al obtener los empleados', error);
+      }
+    );
+
+    this.hotelesService.getAllHoteles().subscribe(
+      (hoteles) => {
+        this.hoteles = hoteles;
+        this.hotelesMap = this.hoteles.reduce((map, hotel) => {
+          map[hotel.id] = hotel.nombre;
+          return map;
+        }, {} as { [key: string]: string });
+      },
+      (error) => {
+        console.error('Error al obtener los hoteles', error);
       }
     );
   }
